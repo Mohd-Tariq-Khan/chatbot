@@ -42,8 +42,6 @@ body{
   color:var(--text);
 }
 
-/* SIDEBAR */
-
 
 /* OVERLAY */
 
@@ -362,7 +360,7 @@ body{
   width:280px;
   height:100vh;
   background:#111827;
-  color:#fff;
+  color:black;
   z-index:10000;
   transition:left .35s ease;
   display:flex;
