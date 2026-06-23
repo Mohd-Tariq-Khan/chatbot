@@ -80,9 +80,9 @@ body{
 
 .sidebar-menu button{
   width:100%;
-  background:none;
+  background:black;
   border:none;
-  color:#7c3aed;
+  color:white;
   text-align:left;
   padding:14px;
   border-radius:10px;
