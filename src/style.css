@@ -82,7 +82,7 @@ body{
   width:100%;
   background:none;
   border:none;
-  color:black;
+  color:white;
   text-align:left;
   padding:14px;
   border-radius:10px;
@@ -124,7 +124,7 @@ body{
 .header-left{
   display:flex;
   align-items:center;
-  gap:15px;
+  gap:30px;
 }
 
 .header h1{
