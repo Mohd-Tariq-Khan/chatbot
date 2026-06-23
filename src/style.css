@@ -394,7 +394,7 @@ body{
   width:100%;
   border:none;
   background:#1f2937;
-  color:purple;
+  color:white;
   padding:14px 16px;
   border-radius:12px;
   text-align:left;
@@ -448,7 +448,7 @@ body{
   border:none;
   border-radius:12px;
   background:rgba(255,255,255,.2);
-  color:white;
+  color:purple;
   font-size:24px;
   cursor:pointer;
   transition:.3s;
