@@ -360,7 +360,7 @@ body{
   width:280px;
   height:100vh;
   background:#111827;
-  color:black;
+  color:#fff;
   z-index:10000;
   transition:left .35s ease;
   display:flex;
