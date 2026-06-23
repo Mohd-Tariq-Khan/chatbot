@@ -77,10 +77,7 @@ function App() {
       const botMessage = {
         id: crypto.randomUUID(),
         sender: "bot",
-        text: `${result.answer}
-
-Related:
-${result.related.join(", ")}`,
+        text:result.answer,
         time: new Date().toLocaleTimeString()
       };
 
