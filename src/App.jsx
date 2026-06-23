@@ -132,95 +132,144 @@ ${result.related.join(", ")}`,
     "Explain AI",
     "What is MERN Stack?"
   ];
+return (
+  <div className={darkMode ? "app dark" : "app"}>
 
-  return (
-    <div className={darkMode ? "app dark" : "app"}>
-      <header className="header">
-        <div>
-          <h1> AI FAQ Chatbot</h1>
-          <p>
-            React • JavaScript • Git • Docker • AI
-          </p>
-        </div>
-
-        <div className="header-buttons">
-          <button
-            onClick={() =>
-              setDarkMode(!darkMode)
-            }
-          >
-            {darkMode ? "☀️" : "🌙"}
-          </button>
-
-          <button onClick={exportChat}>
-            📤
-          </button>
-
-          <button onClick={clearChat}>
-            🗑️
-          </button>
-        </div>
-      </header>
-
-      <div className="suggestions">
-        {suggestions.map((item) => (
-          <button
-            key={item}
-            onClick={() => setInput(item)}
-          >
-            {item}
-          </button>
-        ))}
+    {/* Sidebar */}
+    <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+      <div className="sidebar-header">
+        <h2>🤖 AI FAQ</h2>
       </div>
 
-      <div
-        className="chat-container"
-        ref={chatRef}
-      >
-        {messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`message ${msg.sender}`}
-          >
-            <div className="message-text">
-              {msg.text}
-            </div>
-
-            <span className="time">
-              {msg.time}
-            </span>
-          </div>
-        ))}
-
-        {isTyping && (
-          <div className="typing">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        )}
+      <div className="sidebar-menu">
+        <button>🏠 Dashboard</button>
+        <button onClick={clearChat}>💬 New Chat</button>
+        <button>📚 FAQ Topics</button>
+        <button onClick={exportChat}>📤 Export Chat</button>
+        <button onClick={clearChat}>🗑 Clear Chat</button>
       </div>
 
-      <div className="input-section">
-        <input
-          type="text"
-          placeholder="Ask a programming question..."
-          value={input}
-          onChange={(e) =>
-            setInput(e.target.value)
-          }
-          onKeyDown={(e) =>
-            e.key === "Enter" &&
-            sendMessage()
-          }
-        />
-
-        <button onClick={sendMessage}>
-          Send
-        </button>
+      <div className="sidebar-footer">
+        <p>AI FAQ Chatbot v1.0</p>
       </div>
     </div>
-  );
-}
 
-export default App;
+    {sidebarOpen && (
+      <div
+        className="overlay"
+        onClick={() => setSidebarOpen(false)}
+      />
+    )}
+
+    {/* Header */}
+    <header className="header">
+
+      <div className="header-left">
+
+        <button
+          className="menu-btn"
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+        >
+          ☰
+        </button>
+
+        <div>
+          <h1>🤖 AI FAQ Chatbot</h1>
+          <p>React • JavaScript • Git • Docker • AI</p>
+        </div>
+
+      </div>
+
+      <div className="header-buttons">
+
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {darkMode ? "☀️" : "🌙"}
+        </button>
+
+        <button onClick={exportChat}>
+          📤
+        </button>
+
+        <button onClick={clearChat}>
+          🗑️
+        </button>
+
+      </div>
+
+    </header>
+
+    {/* Suggestions */}
+
+    <div className="suggestions">
+      {suggestions.map((item) => (
+        <button
+          key={item}
+          onClick={() => setInput(item)}
+        >
+          {item}
+        </button>
+      ))}
+    </div>
+
+    {/* Chat */}
+
+    <div
+      className="chat-container"
+      ref={chatRef}
+    >
+
+      {messages.map((msg) => (
+        <div
+          key={msg.id}
+          className={`message ${msg.sender}`}
+        >
+
+          <div className="message-text">
+            {msg.text}
+          </div>
+
+          <span className="time">
+            {msg.time}
+          </span>
+
+        </div>
+      ))}
+
+      {isTyping && (
+        <div className="typing">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      )}
+
+    </div>
+
+    {/* Input */}
+
+    <div className="input-section">
+
+      <input
+        type="text"
+        placeholder="Ask a programming question..."
+        value={input}
+        onChange={(e) =>
+          setInput(e.target.value)
+        }
+        onKeyDown={(e) =>
+          e.key === "Enter" &&
+          sendMessage()
+        }
+      />
+
+      <button onClick={sendMessage}>
+        Send
+      </button>
+
+    </div>
+
+  </div>
+);
+            
