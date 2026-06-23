@@ -174,7 +174,7 @@ return (
         </button>
 
         <div>
-          <h1>🤖 AI FAQ Chatbot</h1>
+          <h1> AI FAQ Chatbot</h1>
           <p>React • JavaScript • Git • Docker • AI</p>
         </div>
 
