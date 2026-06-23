@@ -138,7 +138,7 @@ return (
     {/* Sidebar */}
     <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
       <div className="sidebar-header">
-        <h2>🤖 AI FAQ</h2>
+        <h2> AI FAQ</h2>
       </div>
 
       <div className="sidebar-menu">
