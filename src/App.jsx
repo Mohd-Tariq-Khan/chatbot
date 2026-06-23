@@ -137,7 +137,7 @@ ${result.related.join(", ")}`,
     <div className={darkMode ? "app dark" : "app"}>
       <header className="header">
         <div>
-          <h1>🤖 AI FAQ Chatbot</h1>
+          <h1> AI FAQ Chatbot</h1>
           <p>
             React • JavaScript • Git • Docker • AI
           </p>
