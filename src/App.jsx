@@ -19,7 +19,7 @@ function App() {
   const [input, setInput] = useState("");
   const [darkMode, setDarkMode] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
-
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const chatRef = useRef(null);
 
   useEffect(() => {
