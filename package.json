@@ -1,1 +1,31 @@
-
+{
+  "name": "ai-faq-chatbot",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Modern AI FAQ Chatbot built with React 18 and Vite",
+  "author": "Mohd Tariq Khan",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "react",
+    "vite",
+    "chatbot",
+    "faq",
+    "javascript",
+    "ai",
+    "frontend"
+  ],
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
+  }
+}
